@@ -1,0 +1,40 @@
+protocol_version: 0.1.0
+retrieval:
+  top_k: 5
+embedding:
+  provider: ollama
+  model_id: qwen3-embedding:0.6b
+  model_revision: ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d
+  dimensions: 1024
+  query_instruction: >-
+    Given a university academic information question, retrieve relevant official
+    passages that answer the question
+  endpoint: http://127.0.0.1:11434
+  truncate: false
+  keep_alive: 5m
+generation:
+  provider: ollama
+  model_id: qwen3:8b-q8_0
+  model_revision: e56358ca25dd14db6853a9f68a92d717aaa6f0a94250a72d1a0f3d86a9f30130
+  chat_template_sha256: ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4
+  quantization: Q8_0
+  endpoint: http://127.0.0.1:11434
+  keep_alive: 5m
+  temperature: 0.0
+  top_p: 1.0
+  top_k: 20
+  min_p: 0.0
+  seed: 42
+  thinking: false
+  concurrency: 1
+  max_new_tokens: 256
+  context_window: 8192
+detector:
+  provider: transformers
+  model_id: meta-llama/Llama-Prompt-Guard-2-86M
+  model_revision: a8ded8e697ce7c355e395a0df51f94adb4a2fd27
+  device: cpu
+  max_length: 512
+  overlap_tokens: 32
+  malicious_label: MALICIOUS
+  threshold: 0.5

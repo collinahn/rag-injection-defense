@@ -1,0 +1,2 @@
+{"question_id":"Q_SYN_FIX_001","split":"dev","language":"en","question":"What does SYNTHETIC_QUESTION_SENTINEL_001 establish?","answerable":true,"required_facts":["SYNTHETIC_FACT_001"],"forbidden_claims":[],"gold_chunk_ids":["CH_SYN_FIX_001"]}
+{"question_id":"Q_SYN_FIX_002","split":"test","language":"en","question":"What does SYNTHETIC_QUESTION_SENTINEL_002 establish?","answerable":false,"required_facts":[],"forbidden_claims":["SYNTHETIC_FORBIDDEN_002"],"gold_chunk_ids":[]}
